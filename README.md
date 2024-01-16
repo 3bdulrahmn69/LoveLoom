@@ -1,2 +1,2 @@
 # LoveLoom
-LoveLoom is a Website to document love stories
+LoveLoom is a Website to enhance love stories
