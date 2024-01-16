@@ -27,7 +27,7 @@
 
 <body class="bg-black text-white">
   <div id="page-content" class="page-content">
-    <header class="w-full h-24 z-20 px-8 fixed top-0 bg-black">
+    <header class="w-full h-24 z-20 px-8">
       <div class="w-full h-full flex justify-between items-center">
         <a class="logo flex justify-center items-center select-none" href="/">
           <img src="assets/svg/heart.svg" alt="LoveLoom Logo" class="w-14 h-14 object-contain">
@@ -37,18 +37,16 @@
           </div>
         </a>
         <nav class="hNav">
-          <ul class="flex gap-3 uppercase">
-            <li><a href="/"
-                class="hover:text-red-600 py-2 px-4 hover:border-b hover:border-red-600 text-xl active">Home</a>
+          <ul class="flex gap-3 ">
+            <li><button data-scroll-to="services"
+                class="hover:text-red-600 py-2 px-4 hover:border-b hover:border-red-600 text-xl uppercase">Services</button>
             </li>
-            <li><a href="#services"
-                class="hover:text-red-600 py-2 px-4 hover:border-b hover:border-red-600 text-xl">Services</a>
+            <li><button data-scroll-to="about"
+                class="hover:text-red-600 py-2 px-4 hover:border-b hover:border-red-600 text-xl uppercase">About</>
             </li>
-            <li><a href="#about"
-                class="hover:text-red-600 py-2 px-4 hover:border-b hover:border-red-600 text-xl">About</a>
+            <li><button data-scroll-to="contact"
+                class="hover:text-red-600 py-2 px-4 hover:border-b hover:border-red-600 text-xl uppercase">Contact</>
             </li>
-            <li><a href="#contact"
-                class="hover:text-red-600 py-2 px-4 hover:border-b hover:border-red-600 text-xl">Contact</a></li>
           </ul>
         </nav>
         <button class="hamburger" type="button">
@@ -93,14 +91,14 @@
         </button>
       </div>
     </header>
-    <section class="hero my-24" id="home">
+    <section class="hero" id="home">
       <div class="w-full h-full flex justify-center items-center relative">
         <div class="heroText flex flex-col justify-center items-center gap-5">
           <h1 class="md:text-5xl text-4xl font-bold text-center">LoveLoom enhance your <br />
             <span id="typewriter" class="uppercase text-red-600"></span><span id="curser"
               class="font-extralight">|</span>
           </h1>
-          <a href="#services" class="magneto">
+          <a href="templates/AmongTheStars.html" class="magneto">
             <span class="text">Get Started</span>
           </a>
         </div>
@@ -108,6 +106,20 @@
           <span class="downT uppercase">Services</span>
           <span class="downA"><i class="fa-solid fa-arrow-down"></i></span>
         </div>
+      </div>
+      <div class="navBtn fixed bottom-10 right-0 z-50">
+        <button title="home">
+          <i class="fa-solid fa-house text-2xl" data-scroll-to="home"></i>
+        </button>
+        <button title="Services">
+          <i class="fa-solid fa-screwdriver-wrench text-2xl" data-scroll-to="services"></i>
+        </button>
+        <button title="about">
+          <i class="fa-solid fa-user-tie text-2xl" data-scroll-to="about"></i>
+        </button>
+        <button title="contact">
+          <i class="fa-solid fa-address-book text-2xl" data-scroll-to="contact"></i>
+        </button>
       </div>
     </section>
     <section id="services" class="services">
@@ -119,8 +131,7 @@
           <a href="#">Explore Love <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <figure class="entry__media">
-          <img src="assets/images/services_1.jpg" width="450" height="600"
-            alt="People wearing traditional robes on a Japanese city street">
+          <img src="assets/images/services_1.jpg" width="450" height="600" alt="Love story">
         </figure>
       </div>
       <div class="entry">
@@ -130,8 +141,7 @@
           <a href="#">Explore Wedding <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <figure class="entry__media">
-          <img src="assets/images/services_2.jpg" width="450" height="600"
-            alt="People wearing traditional robes on a Japanese city street">
+          <img src="assets/images/services_2.jpg" width="450" height="600" alt="Wedding">
         </figure>
       </div>
       <div class="entry">
@@ -141,8 +151,7 @@
           <a href="#">Explore Engagement <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <figure class="entry__media">
-          <img src="assets/images/services_3.jpg" width="450" height="600"
-            alt="People wearing traditional robes on a Japanese city street">
+          <img src="assets/images/services_3.jpg" width="450" height="600" alt="Engagement">
         </figure>
       </div>
       <div class="entry">
@@ -152,11 +161,10 @@
           <a href="#">Explore Memories <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <figure class="entry__media">
-          <img src="assets/images/services_4.jpg" width="450" height="600"
-            alt="People wearing traditional robes on a Japanese city street">
+          <img src="assets/images/services_4.jpg" width="450" height="600" alt="Memories">
         </figure>
       </div>
-      <a href="#" class="exploreAll rounded-lg px-4 py-2">Explore All Templates <i
+      <a href="./templates.html" class="exploreAll rounded-lg px-4 py-2">Explore All Templates <i
           class="fa-solid fa-arrow-right"></i></a>
     </section>
     <section id="about" class="about h-screen md:py-4 py-2 md:px-8 px-4">
@@ -192,7 +200,7 @@
     <section id="contact" class="contact w-full min-h-screen">
       <h2 class="uppercase text-center text-5xl md:mb-20 mb-4">Contact</h2>
       <div class="w-10/12 min-h-3/4 flex md:flex-row flex-col justify-between items-center mx-auto">
-        <div class="md:text-3xl text-2xl">
+        <div class="md:w-2/4 w-full md:text-3xl text-2xl">
           <h3 class="md:text-5xl text-3xl md:mb-4 mb-2 text-red-600">LoveLoom</h3>
           <p>Feel free to contact with us</p>
           <p>and we will help you</p>

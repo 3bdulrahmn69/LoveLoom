@@ -13,7 +13,7 @@ document.getElementById('lovePhone').innerText = '+2001018326780';
 document.getElementById('lovePhone').href = 'tel:2001018326780';
 document.getElementById('currentYear').innerText = new Date().getFullYear();
 // _________________________ Navbar _________________________
-const links = document.querySelectorAll('.hNav li a');
+const links = document.querySelectorAll('.hNav li button');
 
 links.forEach((link) => {
   link.addEventListener('click', (e) => {
@@ -21,6 +21,26 @@ links.forEach((link) => {
       link.classList.remove('active');
     });
     e.target.classList.add('active');
+  });
+});
+
+const navBtn = document.querySelector('.navBtn');
+
+document.addEventListener('scroll', () => {
+  if (window.scrollY > 250) {
+    navBtn.classList.add('show');
+  } else {
+    navBtn.classList.remove('show');
+  }
+});
+
+document.querySelectorAll('[data-scroll-to]').forEach((element) => {
+  element.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = e.target.dataset.scrollTo;
+    const targetElement = document.getElementById(target);
+    console.log(targetElement);
+    lenis.scrollTo(targetElement, 0);
   });
 });
 
