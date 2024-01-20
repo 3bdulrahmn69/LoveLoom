@@ -12,7 +12,7 @@ document.getElementById('currentYear').innerText = new Date().getFullYear();
 if (window.location.pathname.includes('purchase')) {
   window.addEventListener('load', () => {
     if (localStorage.getItem('selectedTemplate') === null) {
-      window.location.href = 'templates.html';
+      window.location.href = 'templates';
     }
   });
 
@@ -118,7 +118,7 @@ will send the screenshot of the payment now.`;
       tDescription: 'Light up your life with your love',
       tImg: 'assets/images/template3.png',
       tLink: 'templates/MySunAndMoon.html',
-      tPrice: '300 EGP',
+      tPrice: '350 EGP',
     },
   };
 

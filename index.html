@@ -27,7 +27,7 @@
 
 <body class="bg-black text-white">
   <div id="page-content" class="page-content">
-    <header class="w-full h-24 z-20 px-8" role='top'>
+    <header class="w-full h-24 z-20 px-8" role='top' aria-label="Header">
       <div class="w-full h-full flex justify-between items-center">
         <a class="logo flex justify-center items-center select-none" href="/" aria-label="Back To Home">
           <img src="assets/svg/heart.svg" alt="LoveLoom Logo" class="w-14 h-14 object-contain">
@@ -91,7 +91,7 @@
         </button>
       </div>
     </header>
-    <section class="hero" id="home">
+    <section class="hero" id="home" aria-label="Home">
       <div class="w-full h-full flex justify-center items-center relative">
         <div class="heroText flex flex-col justify-center items-center gap-5">
           <h1 class="md:text-5xl text-4xl font-bold text-center">LoveLoom enhance your <br />
@@ -122,7 +122,7 @@
         </button>
       </div>
     </section>
-    <section id="services" class="services">
+    <section id="services" class="services" aria-label="Services">
       <h2 class="uppercase text-center text-5xl mb-20">Services</h2>
       <div class="entry">
         <div class="entry__meta">
@@ -167,7 +167,7 @@
       <a href="templates.html" class="exploreAll rounded-lg px-4 py-2">Explore All Templates <i
           class="fa-solid fa-arrow-right"></i></a>
     </section>
-    <section id="about" class="about h-screen md:py-4 py-2 md:px-8 px-4">
+    <section id="about" class="about h-screen md:py-4 py-2 md:px-8 px-4" aria-label="About">
       <h2 class="uppercase text-center text-5xl md:mb-20 mb-4">About</h2>
       <div class="flex justify-evenly items-center md:flex-row flex-col gap-2">
         <div class="md:w-4/12">
@@ -197,7 +197,7 @@
         <img src="assets/svg/love.svg" alt="illustrations by StorySet" width="400" height="400">
       </div>
     </section>
-    <section id="contact" class="contact w-full min-h-screen">
+    <section id="contact" class="contact w-full min-h-screen" aria-label="Contact">
       <h2 class="uppercase text-center text-5xl md:mb-20 mb-4">Contact</h2>
       <div class="w-10/12 min-h-3/4 flex md:flex-row flex-col justify-between items-center mx-auto">
         <div class="md:w-2/4 w-full md:text-3xl text-2xl">
@@ -216,7 +216,7 @@
           </div>
         </div>
         <div class="md:w-2/4 w-full md:mpt-0 pt-6">
-          <form name="contact" method="post" netlify onSubmit="submit" action="/susses.html">
+          <form name="contact" method="post" netlify onSubmit="submit" action="/susses">
             <input type="text" placeholder="Name" name="Name"
               class="w-full h-12 px-4 rounded outline-none mb-4 text-black">
             <input type="Number" placeholder="Number" name="Number"
@@ -231,7 +231,7 @@
         </div>
       </div>
     </section>
-    <footer class="w-full py-4 flex flex-col items-center justify-center border-t border-red-100">
+    <footer class="w-full py-4 flex flex-col items-center justify-center border-t border-red-100" aria-label="Footer">
       <div class="md:w-10/12 w-full flex md:flex-row flex-col gap-4 px-8 justify-between">
         <div>
           <a href="/" class="text-5xl text-red-600">LoveLoom</a>

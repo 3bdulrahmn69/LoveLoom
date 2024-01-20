@@ -27,7 +27,7 @@
 
 <body class="bg-black text-white">
   <div id="page-content" class="page-content">
-    <header class="w-full h-24 z-20 px-8" role='top'>
+    <header class="w-full h-24 z-20 px-8" role='top' aria-label="Header">
       <div class="w-full h-full flex justify-between items-center sp">
         <a class="logo flex justify-center items-center select-none" href="/" aria-label="LoveLoom">
           <img src="assets/svg/heart.svg" alt="LoveLoom Logo" class="w-14 h-14 object-contain">
@@ -41,7 +41,7 @@
         </div>
       </div>
     </header>
-    <section class="w-10/12 mx-auto flex flex-col justify-center mb-6">
+    <section class="w-10/12 mx-auto flex flex-col justify-center mb-6" aria-label="Templates">
       <header class="templatesHeader">
         <a href="/" title="LoveLoom" aria-label="LoveLoom">
           <i class="fa-solid fa-arrow-left-long"></i> <span>Back</span>
@@ -51,7 +51,7 @@
       <div id="templatesContainer" class="w-full flex flex-col gap-8 items-center">
       </div>
     </section>
-    <footer class="w-full py-4 flex flex-col items-center justify-center border-t border-red-100">
+    <footer class="w-full py-4 flex flex-col items-center justify-center border-t border-red-100" aria-label="Footer">
       <div class="md:w-10/12 w-full flex md:flex-row flex-col gap-4 px-8 justify-between">
         <div>
           <a href="/" class="text-5xl text-red-600" aria-label="LoveLoom">LoveLoom</a>
@@ -76,8 +76,8 @@
           </div>
         </div>
       </div>
-      <p class="text-xs py-7">all rights reserved <a href="/" class="text-red-600 text-xl" aria-label="LoveLoom">LoveLoom</a> &copy; <span
-          id="currentYear"></span></p>
+      <p class="text-xs py-7">all rights reserved <a href="/" class="text-red-600 text-xl"
+          aria-label="LoveLoom">LoveLoom</a> &copy; <span id="currentYear"></span></p>
     </footer>
   </div>
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
