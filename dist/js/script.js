@@ -170,5 +170,5 @@ will send the screenshot of the payment now.`;
     window.location.href = 'purchase.html';
   }
 } else {
-  window.location.href = 'index.html';
+  console.log('');
 }
