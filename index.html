@@ -217,6 +217,7 @@
         </div>
         <div class="md:w-2/4 w-full md:mpt-0 pt-6">
           <form name="contact" method="post" netlify onSubmit="submit" action="/susses">
+            <input type="hidden" name="form-name" value="contact" />
             <input type="text" placeholder="Name" name="name"
               class="w-full h-12 px-4 rounded outline-none mb-4 text-black" aria-label="Your Name" required>
             <input type="Number" placeholder="Number" name="number"
