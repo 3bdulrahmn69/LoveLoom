@@ -47,8 +47,8 @@ if (window.location.pathname.includes('purchase')) {
         .getElementById('purchase-selected-method')
         .classList.remove('hidden');
 
-      const Message = `Hey loveLoom, Mr. ${nameInput.value} with you I want to buy ${selectedTemplate.tName}
-template and i have pay ${selectedTemplate.tPrice} by ${paymentRadioButtons[0].value} i
+      const Message = `Hey loveLoom, Mr. ${nameInput.value} with you I want to buy ${selectedTemplate.tName} 
+template and i have pay ${selectedTemplate.tPrice} by ${paymentRadioButtons[0].value} i 
 will send the screenshot of the payment now.`;
 
       if (paymentRadioButtons[0].value === 'Vodafone Cash') {
