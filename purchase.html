@@ -37,19 +37,44 @@
           </div>
         </a>
         <div class="del">
-          <h3 class="md:text-3xl text-2xl uppercase font-semibold">Templates</h3>
+          <h3 class="md:text-3xl text-2xl uppercase font-semibold">Purchase</h3>
         </div>
       </div>
     </header>
-    <section class="w-10/12 mx-auto flex flex-col justify-center mb-6">
-      <header class="templatesHeader">
-        <a href="/" title="Back to home page" aria-label="Link to home page">
-          <i class="fa-solid fa-arrow-left-long"></i> <span>Back</span>
-        </a>
-        <p><span id="templatesLen">3</span>&ThinSpace;<span class="del">Templates Found</span></p>
-      </header>
-      <div id="templatesContainer" class="w-full flex flex-col gap-8 items-center">
+    <section id="purchase-methods" class="h-screen w-full flex justify-center items-center relative">
+      <div class="cll"></div>
+      <div
+        class="border border-red-600 bg-black md:w-1/3 w-11/12 h-2/4 rounded-lg p-4 flex flex-col gap-2 justify-center items-center">
+        <div class="w-full">
+          <p class="text-2xl">Template: <span class="tBuyName"></span></p>
+          <p class="text-xl">Price: <span class="tBuyPrice"></span></p>
+        </div>
+        <div class="w-full">
+          <div class="w-full">
+            <input type="text" name="name" placeholder="Name" required
+              class="bg-black border border-white outline-none px-2 py-1 rounded focus:border-red-600 w-full mb-3">
+            <input type="number" name="number" placeholder="Number" required
+              class="bg-black border border-white outline-none px-2 py-1 rounded focus:border-red-600 w-full">
+          </div>
+          <div class="p-1">
+            <label for="Vodafone" class="whitespace-nowrap">
+              <input type="radio" name="payment" id="Vodafone" value="Vodafone Cash" required>
+              Vodafone Cash
+            </label>
+            <label for="Instapay" class="whitespace-nowrap">
+              <input type="radio" name="payment" id="Instapay" value="Instapay" required>
+              Instapay
+            </label>
+          </div>
+          <div class="mt-8 w-full flex justify-end gap-4">
+            <a href="./templates.html" class="border border-red-600 py-2 px-4 rounded w-24" id="CancelBuy">Cancel</a>
+            <button class="bg-red-600 py-2 px-4 rounded cursor-pointer w-24" id="buy">Buy</button>
+          </div>
+        </div>
       </div>
+    </section>
+    <section id="purchase-selected-method"
+      class="hidden min-h-screen w-full flex flex-col justify-center items-center relative">
     </section>
     <footer class="w-full py-4 flex flex-col items-center justify-center border-t border-red-100">
       <div class="md:w-10/12 w-full flex md:flex-row flex-col gap-4 px-8 justify-between">
