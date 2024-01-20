@@ -218,15 +218,18 @@
         <div class="md:w-2/4 w-full md:mpt-0 pt-6">
           <form name="contact" method="post" netlify onSubmit="submit" action="/susses">
             <input type="text" placeholder="Name" name="Name"
-              class="w-full h-12 px-4 rounded outline-none mb-4 text-black">
+              class="w-full h-12 px-4 rounded outline-none mb-4 text-black" aria-label="Your Name" required>
             <input type="Number" placeholder="Number" name="Number"
-              class="w-full h-12 px-4 rounded outline-none mb-4 text-black">
+              class="w-full h-12 px-4 rounded outline-none mb-4 text-black" aria-label="Your Number" required>
             <input type="email" placeholder="Email" name="Email"
-              class="w-full h-12 px-4 rounded outline-none mb-4 text-black">
-            <textarea name="Message" id="" cols="30" rows="10" placeholder="Message"
-              class="w-full h-32 px-4 py-2 rounded outline-none mb-4 text-black" style="resize: none;"></textarea>
-            <input type="submit" value="Send"
+              class="w-full h-12 px-4 rounded outline-none mb-4 text-black" aria-label="Your Number" required>
+            <textarea name="Message" id="" cols="30" rows="10" placeholder="Message" aria-label="Your Message"
+              class="w-full h-32 px-4 py-2 rounded outline-none mb-4 text-black" style="resize: none;"
+              required></textarea>
+            <button type="submit"
               class="w-full h-12 px-4 rounded outline-none mb-4 bg-red-600 cursor-pointer hover:opacity-80 transition-opacity">
+              Send
+            </button>
           </form>
         </div>
       </div>
