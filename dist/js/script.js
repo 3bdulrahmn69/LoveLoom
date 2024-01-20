@@ -9,7 +9,7 @@ gsap.ticker.lagSmoothing(0);
 document.getElementById('currentYear').innerText = new Date().getFullYear();
 
 // _________________________ Templates _________________________
-if (window.location.pathname === '/purchase.html') {
+if (window.location.pathname.includes('purchase')) {
   window.addEventListener('load', () => {
     if (localStorage.getItem('selectedTemplate') === null) {
       window.location.href = 'templates.html';
@@ -96,7 +96,7 @@ will send the screenshot of the payment now.`;
   document.getElementById('CancelBuy').addEventListener('click', () => {
     localStorage.removeItem('selectedTemplate');
   });
-} else if (window.location.pathname === '/templates.html') {
+} else if (window.location.pathname.includes('templates')) {
   const templates = {
     template1: {
       tName: 'Among The Stars',
@@ -170,5 +170,5 @@ will send the screenshot of the payment now.`;
     window.location.href = 'purchase.html';
   }
 } else {
-  console.log('');
+  window.location.href = 'index.html';
 }
