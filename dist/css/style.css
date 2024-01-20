@@ -629,10 +629,6 @@ video {
   margin-top: 2rem;
 }
 
-.mr-3 {
-  margin-right: 0.75rem;
-}
-
 .flex {
   display: flex;
 }
@@ -667,10 +663,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-11 {
-  height: 2.75rem;
 }
 
 .min-h-screen {
@@ -708,26 +700,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-11 {
-  width: 2.75rem;
-}
-
-.w-1 {
-  width: 0.25rem;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
-}
-
-.w-4\/6 {
-  width: 66.666667%;
-}
-
-.w-2 {
-  width: 0.5rem;
 }
 
 .transform {
@@ -792,14 +764,6 @@ video {
   gap: 2rem;
 }
 
-.self-start {
-  align-self: flex-start;
-}
-
-.self-end {
-  align-self: flex-end;
-}
-
 .whitespace-nowrap {
   white-space: nowrap;
 }
@@ -847,11 +811,6 @@ video {
 .bg-red-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.bg-neutral-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
 }
 
 .object-contain {
@@ -950,11 +909,6 @@ video {
   line-height: 1rem;
 }
 
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -965,10 +919,6 @@ video {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-medium {
-  font-weight: 500;
 }
 
 .uppercase {
@@ -1005,6 +955,10 @@ video {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 html.lenis {
@@ -1392,6 +1346,8 @@ header[role='top'] {
   flex-direction: column;
   opacity: 0;
   visibility: hidden;
+  border: 1px solid #000;
+  border-right: transparent;
   transition: opacity 0.5s ease, visibility 0.5s ease;
   -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
   -moz-transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -1628,10 +1584,6 @@ h6 span {
   opacity: 0.8;
 }
 
-.hover\:opacity-85:hover {
-  opacity: 0.85;
-}
-
 .focus\:border-red-600:focus {
   --tw-border-opacity: 1;
   border-color: rgb(220 38 38 / var(--tw-border-opacity));
@@ -1670,10 +1622,6 @@ h6 span {
     width: 33.333333%;
   }
 
-  .md\:w-4\/6 {
-    width: 66.666667%;
-  }
-
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1701,10 +1649,5 @@ h6 span {
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
-  }
-
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 }
