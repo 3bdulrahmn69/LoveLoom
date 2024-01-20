@@ -167,7 +167,7 @@ will send the screenshot of the payment now.`;
   function moveToBuy(templateKey) {
     const selectedTemplate = templates[templateKey];
     localStorage.setItem('selectedTemplate', JSON.stringify(selectedTemplate));
-    window.location.href = 'purchase.html';
+    window.location.href = 'purchase';
   }
 } else {
   window.location.href = 'index.html';
