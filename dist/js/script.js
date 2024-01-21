@@ -12,7 +12,7 @@ document.getElementById('currentYear').innerText = new Date().getFullYear();
 if (window.location.pathname.includes('purchase')) {
   window.addEventListener('load', () => {
     if (localStorage.getItem('selectedTemplate') === null) {
-      window.location.href = 'templates';
+      window.location.href = 'templates.html';
     }
   });
 
@@ -35,6 +35,8 @@ if (window.location.pathname.includes('purchase')) {
       'input[name="payment"]:checked'
     );
 
+    const Message = `Hey loveLoom, Mr. ${nameInput.value} with you I want to buy ${selectedTemplate.tName} template and i have pay ${selectedTemplate.tPrice} by ${paymentRadioButtons[0].value} i will send the screenshot of the payment now.`;
+
     if (
       nameInput.value === '' ||
       numberInput.value === '' ||
@@ -47,22 +49,18 @@ if (window.location.pathname.includes('purchase')) {
         .getElementById('purchase-selected-method')
         .classList.remove('hidden');
 
-      const Message = `Hey loveLoom, Mr. ${nameInput.value} with you I want to buy ${selectedTemplate.tName} 
-template and i have pay ${selectedTemplate.tPrice} by ${paymentRadioButtons[0].value} i 
-will send the screenshot of the payment now.`;
-
       if (paymentRadioButtons[0].value === 'Vodafone Cash') {
         document.getElementById('purchase-selected-method').innerHTML = `
-      <div class="flex flex-col md:w-4/6 w-11/12 justify-center items-center">
+      <div class="flex flex-col md:w-4/6 w-10/12 justify-center items-center">
         <figure>
           <img src="assets/images/vodafone.png" width="56" height="56" alt="Vodafone" class="w-14 h-14">
         </figure>
         <h2 class="text-4xl">Vodafone Cash</h2>
         <br>
-        <p class="text-2xl self-start">Hey Mr. <span class="capitalize">${nameInput.value}</span></p>
+        <p class="text-2xl self-start mb-2">Hey Mr. <span class="capitalize">${nameInput.value}</span></p>
         <p class="md:text-2xl text-xl">
-          Please send ${selectedTemplate.tPrice} for ${selectedTemplate.tName}"
-          to <span class="bg-red-600 px-4 py-1 rounded">01018326780</span> and take a screenshot then click on the
+          Please send ${selectedTemplate.tPrice} for "${selectedTemplate.tName}"
+          to <span class="bg-red-600 px-4 py-1 rounded" id="copyValue" >01018326780</span> and take a screenshot then click on the
           button
           below and send the screenshot to us.
         </p>
@@ -72,16 +70,16 @@ will send the screenshot of the payment now.`;
       </div>`;
       } else {
         document.getElementById('purchase-selected-method').innerHTML = `
-        <div class="flex flex-col md:w-4/6 w-11/12 justify-center items-center">
+        <div class="flex flex-col md:w-4/6 w-10/12 justify-center items-center">
         <figure>
           <img src="assets/images/instapay.png" width="56" height="56" alt="instapay" class="w-14 h-14">
         </figure>
         <h2 class="text-4xl">Instapay</h2>
         <br>
-        <p class="text-2xl self-start">Hey Mr. <span class="capitalize">${nameInput.value}</span></p>
+        <p class="text-2xl self-start mb-2">Hey Mr. <span class="capitalize">${nameInput.value}</span></p>
         <p class="md:text-2xl text-xl">
-          Please send ${selectedTemplate.tPrice} for ${selectedTemplate.tName}"
-          to <span class="bg-red-600 px-2 py-1 rounded">abdelrahmn69@instapay</span> and take a screenshot then click on the
+          Please send ${selectedTemplate.tPrice} for "${selectedTemplate.tName}"
+          to <span class="bg-red-600 px-2 py-1 rounded" id="copyValue">abdelrahmn69@instapay</span> and take a screenshot then click on the
           button
           below and send the screenshot to us.
         </p>
@@ -91,12 +89,33 @@ will send the screenshot of the payment now.`;
       </div>`;
       }
     }
+
+    const copyValue = document.getElementById('copyValue');
+    copyValue.addEventListener('click', () => {
+      if (copyValue.innerText === 'Copied') return;
+
+      const oContent = copyValue.innerText;
+      navigator.clipboard.writeText(copyValue.innerText);
+
+      setTimeout(() => {
+        copyValue.innerText = 'Copied';
+        setTimeout(() => {
+          copyValue.innerText = oContent;
+        }, 500);
+      }, 0);
+    });
   });
 
   document.getElementById('CancelBuy').addEventListener('click', () => {
     localStorage.removeItem('selectedTemplate');
   });
 } else if (window.location.pathname.includes('templates')) {
+  window.addEventListener('load', () => {
+    if (localStorage.getItem('selectedTemplate') !== null) {
+      localStorage.removeItem('selectedTemplate');
+    }
+  });
+
   const templates = {
     template1: {
       tName: 'Among The Stars',
@@ -167,7 +186,7 @@ will send the screenshot of the payment now.`;
   function moveToBuy(templateKey) {
     const selectedTemplate = templates[templateKey];
     localStorage.setItem('selectedTemplate', JSON.stringify(selectedTemplate));
-    window.location.href = 'purchase';
+    window.location.href = 'purchase.html';
   }
 } else {
   window.location.href = 'index.html';
