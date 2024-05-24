@@ -7,8 +7,8 @@ gsap.ticker.add((time) => {
 gsap.ticker.lagSmoothing(0);
 
 // _________________________ Placeholders _________________________
-document.getElementById('loveEmail').innerText = 'loveloom66@gmail.com';
-document.getElementById('loveEmail').href = 'mailto:loveloom66@gmail.com';
+document.getElementById('loveEmail').innerText = 'loveloom@gmail.com';
+document.getElementById('loveEmail').href = 'mailto:loveloom@gmail.com';
 document.getElementById('lovePhone').innerText = '+2001018326780';
 document.getElementById('lovePhone').href = 'tel:2001018326780';
 document.getElementById('currentYear').innerText = new Date().getFullYear();
